@@ -1,1 +1,0 @@
-docker ansible_host=192.168.57.14 ansible_user=vagrant

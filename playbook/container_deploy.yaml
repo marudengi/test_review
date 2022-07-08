@@ -6,7 +6,7 @@
     container_name: myweb
     image_name: "{{ docker_id }}/hello_tomcat"
   tasks:
-  - name: Create/Start Container
+    - name: Create/Start Container
       docker_container:
         name: "{{ container_name }}"
         image: "{{ image_name }}"

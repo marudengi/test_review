@@ -15,7 +15,6 @@
         username: "{{ docker_id }}"
         password: "{{ docker_key }}"
         state: present
-    - name: Remove
     - name: Image Build with WAR
       docker_image:
         build:

@@ -4,7 +4,8 @@
   vars:
     docker_id: dame94
     container_name: myweb
-    image_name: "{{ docker_id }}/hello_tomcat"
+    image_tag: "{{ lookup('env', 'BUILD_NUMBER') }}"
+    image_name: "{{ docker_id }}/hello_tomcat:{{ image_tag }}"
   tasks:
     - name: Create/Start Container
       docker_container:

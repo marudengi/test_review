@@ -6,7 +6,7 @@
     docker_id: "{{ lookup('env', 'docker_id') }}"
     docker_key: "{{ lookup('env', 'docker_key') }}"
     container_name: myweb
-    image_name: "{{ docker_id }}"/hello_tomcat
+    image_name: "{{ docker_id }}/hello_tomcat"
   tasks:
   - block:
     - name: Login to Docker Hub

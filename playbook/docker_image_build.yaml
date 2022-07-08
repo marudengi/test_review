@@ -5,7 +5,6 @@
   vars:
     docker_id: "{{ lookup('env', 'docker_id') }}"
     docker_key: "{{ lookup('env', 'docker_key') }}"
-    container_name: myweb
     image_tag: "{{ lookup('env','BUILD_NUMBER') }}"
     image_name: "{{ docker_id }}/hello_tomcat:{{ image_tag }}"
   tasks:

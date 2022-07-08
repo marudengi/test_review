@@ -22,15 +22,6 @@
         name: "{{ image_name }}"
         push: yes
         source: build
-    - name: Create/Start Container
-      docker_container:
-        name: "{{ container_name }}"
-        image: "{{ image_name }}"
-        exposed_ports:
-          - "8080:8080"
-        pull: yes
-        recreate: yes
-        state: started
     always:
     - name: Logout to Docker Hub
       docker_login:

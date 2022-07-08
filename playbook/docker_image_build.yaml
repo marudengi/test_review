@@ -21,6 +21,7 @@
           rm: yes
         name: "{{ image_name }}"
         push: yes
+        source: build
     - name: Create/Start Container
       docker_container:
         name: "{{ container_name }}"
